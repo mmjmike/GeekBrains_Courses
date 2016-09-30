@@ -1,19 +1,18 @@
 //Выполнил Михаил Мышкин
 
 
-// Дублирую задание с прошлого урока
+// Задание с прошлого урока с тернарным оператором
 
 console.log("Задание с прошлого урока")
 
 for (i = 1; i <= 100; i++) {
-    if (i % 3 == 0 && i % 5 == 0) {
-        console.log("FizzBuzz");   
-    } else if (i % 3 == 0) {
-        console.log("Fizz");
-    } else if (i % 5 == 0) {
-        console.log("Buzz");
-    } else {
+    var output = "";
+    output += (i % 3 == 0) ? "Fizz" : "";
+    output += (i % 5 == 0) ? "Buzz" : "";
+    if (output == "") {
         console.log(i);
+    } else {
+        console.log(output);
     }
 }
 
