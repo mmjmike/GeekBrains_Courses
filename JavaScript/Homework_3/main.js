@@ -9,11 +9,8 @@ for (i = 1; i <= 100; i++) {
     var output = "";
     output += (i % 3 == 0) ? "Fizz" : "";
     output += (i % 5 == 0) ? "Buzz" : "";
-    if (output == "") {
-        console.log(i);
-    } else {
-        console.log(output);
-    }
+    var final_output = (output == "") ? i : output;
+    console.log(final_output);
 }
 
 
@@ -42,11 +39,7 @@ var output_string;
 for (i = 1; i <= board_size; i++) {
     output_string = '';
     for (j = 1; j <= board_size; j++) {
-        if ((i + j) % 2 == 0) {
-            output_string += symbol_1;
-        } else {
-            output_string += symbol_2;
-        }
+        output_string += ((i + j) % 2 == 0) ? symbol_1 : symbol_2;
     }
     console.log(output_string);
 }
