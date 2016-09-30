@@ -34,10 +34,9 @@ console.log("Задание с шахматной доской")
 var symbol_1 = ' ';
 var symbol_2 = '#';
 var board_size = 8;
-var output_string;
 
 for (i = 1; i <= board_size; i++) {
-    output_string = '';
+    var output_string = '';
     for (j = 1; j <= board_size; j++) {
         output_string += ((i + j) % 2 == 0) ? symbol_1 : symbol_2;
     }
