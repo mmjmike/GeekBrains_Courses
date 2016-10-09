@@ -43,3 +43,20 @@ function numToObject (number) {
     var hundred = (number - one - 10 * ten) / 100;
     return {ones: one, tens: ten, hundreds: hundred};
 }
+
+
+function objectToString (object) {
+    var string = '';
+    for (var key in object) {
+        if (typeof(object[key]) == "function") {continue;}
+        if (string != '') {
+            string += "&";
+        }
+        string += key.toString();
+        string += "=";
+        string += object[key].toString();
+    }
+    return string;
+}
+
+console.log(objectToString(numToObject(374)));
